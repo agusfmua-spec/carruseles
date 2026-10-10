@@ -14,6 +14,12 @@
   3. No tiene tiempo para generar contenido
   4. Mentalidad: cobra poco / le cuesta subir precios
   5. No puede escalar su marca
+  6. No ser vista como referente de su industria (es "una más")
+- **Deseos / sueño a vender en los hooks**:
+  - Ser referente de su industria
+  - Viajar mucho gracias a su marca personal (libertad de tiempo y lugar)
+  - Facturar más de 5K al mes con su marca personal
+  - Que la busquen clientas que ya quieren comprar
 - **Tono y registro**: argentina, de vos; cercana y directa
 - **Lead magnet**: varía por carrusel (video de YouTube, PDF, etc.) y también la palabra clave. Sugerir 2–3 opciones en cada brief; si se elige PDF, crearlo con la misma marca.
 - **Reglas de copy (de Tina)**:

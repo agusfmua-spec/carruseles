@@ -30,6 +30,9 @@
   - "A prueba de boludos": lenguaje súper simple, frases cortas, una sola idea por slide.
     Nada de jerga (pilares, batching, hooks, funnel, herramientas con nombre raro).
     Si hay pasos, un paso por slide. Ejemplos concretos de la vida real.
+  - Puentes SIEMPRE: cada slide termina con una frase que abre la siguiente ("Pero hay un detalle…",
+    "¿Sabés por qué? →", "Pero ojo: con esto solo no alcanza…", "Y para que no arranques de cero…").
+    Van en serif cursiva bordó (rosa sobre bordó), al pie del contenido, con flecha →.
 - **Notas de diseño aprendidas**:
   - Le gustó la portada: título serif arriba sobre crema, foto abajo sin pisar el texto, "Deslizá" en botón bordó.
   - Interior: demasiado editorial pierde lo llamativo. Preferir UNA frase grande por slide (serif bold ~130px,

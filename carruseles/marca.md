@@ -38,6 +38,8 @@
   - Interior: demasiado editorial pierde lo llamativo. Preferir UNA frase grande por slide (serif bold ~130px,
     palabra clave en bordó cursiva) + una línea corta en Quicksand. Sin etiquetas chicas, líneas ni textos de apoyo largos.
     Pasos: número en círculo bordó + frase corta. Cuanto más simple y conciso, mejor.
+  - Portada: foto A SANGRE (ocupa todo el fondo), aclarada con velo blanco arriba; letras oscuras/bordó
+    con halo/sombra blanca para que resalten; BOLD en lo importante. (No le gustó foto solo en la mitad de abajo.)
   - Portada fuerte: palabra gancho GIGANTE en mayúsculas (ej. "EL SECRETO", en bordó cursiva) + promesa en serif
     + bajada chica que rompe la excusa ("para que el 'no tengo tiempo' deje de ser una excusa").
   - Flechas de continuidad ("Así →") siempre hacia la DERECHA (se desliza al costado), nunca hacia abajo.

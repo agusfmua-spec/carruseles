@@ -38,6 +38,8 @@
   - Interior: demasiado editorial pierde lo llamativo. Preferir UNA frase grande por slide (serif bold ~130px,
     palabra clave en bordó cursiva) + una línea corta en Quicksand. Sin etiquetas chicas, líneas ni textos de apoyo largos.
     Pasos: número en círculo bordó + frase corta. Cuanto más simple y conciso, mejor.
+  - Portada fuerte: palabra gancho GIGANTE en mayúsculas (ej. "EL SECRETO", en bordó cursiva) + promesa en serif
+    + bajada chica que rompe la excusa ("para que el 'no tengo tiempo' deje de ser una excusa").
   - Flechas de continuidad ("Así →") siempre hacia la DERECHA (se desliza al costado), nunca hacia abajo.
   - Aprobado con este estilo: carrusel 01 (mes de contenido en una tarde).
   - Alternar fondos crema / bordó (dolor) / rosa (solución, resumen) funciona.

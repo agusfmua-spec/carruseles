@@ -63,10 +63,15 @@
   .rosa { background: var(--suave); }
 
   /* Portada con foto */
-  .portada { justify-content: flex-start; padding-top: 120px; }
+  .portada { justify-content: flex-start; padding-top: 88px; }
   .foto { position: absolute; inset: 0; z-index: 0; }
   .foto img { width: 100%; height: 100%; object-fit: cover; }
-  .portada .foto { top: 720px; }
+  .portada .foto { top: 800px; }
+  .portada .secreto { font-size: 172px; font-weight: 700; line-height: .95; text-transform: uppercase; letter-spacing: -0.02em; margin-bottom: 28px; }
+  .portada .secreto mark { font-weight: 700; }
+  .portada .promesa { font-family: var(--font-titulo); font-size: 58px; line-height: 1.08; margin-bottom: 28px; }
+  .portada .promesa mark { font-style: italic; font-weight: 400; }
+  .portada .excusa { font-size: 32px; line-height: 1.3; }
   .portada .foto img { object-position: 50% 40%; }
   .portada .foto::after {
     content: ""; position: absolute; inset: 0;
@@ -147,8 +152,9 @@
   <div class="foto"><img src="../fotos/grabando-celular-sillon.jpg" alt=""></div>
   <div class="contenido">
     <p class="kicker">Guardá este post</p>
-    <h1>Podés crear <b>un mes de contenido</b> en <mark>una sola tarde</mark></h1>
-    <p class="puente-pie">haciendo esto…</p>
+    <h1 class="secreto">El <mark>secreto</mark></h1>
+    <p class="promesa">para crear un mes de contenido en <mark>una sola tarde</mark></p>
+    <p class="excusa">(para que el <b>"no tengo tiempo"</b> deje de ser una excusa)</p>
   </div>
   <div class="pie"><span>@soytina.fernandez</span><span class="desliza">Deslizá →</span></div>
 </section>

@@ -114,6 +114,25 @@
     font-family: var(--font-titulo); font-weight: 700; font-size: 84px; letter-spacing: .08em;
   }
   .cta .pie { color: var(--fondo); }
+
+  /* Interior llamativo: una frase grande por slide */
+  .grande h2 { font-size: 132px; font-weight: 700; line-height: 1; margin-bottom: 56px; }
+  .grande h2 mark { font-weight: 700; }
+  .grande .sub { font-size: 54px; font-weight: 700; line-height: 1.25; }
+  .grande .sub span { font-weight: 400; }
+  .paso-g { display: flex; align-items: center; gap: 44px; }
+  .paso-g + .paso-g { margin-top: 110px; }
+  .paso-g .n {
+    flex-shrink: 0; width: 170px; height: 170px; border-radius: 50%; background: var(--acento); color: var(--fondo);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-titulo); font-weight: 700; font-size: 110px; line-height: 1;
+  }
+  .paso-g h3 { font-family: var(--font-titulo); font-weight: 700; font-size: 84px; line-height: 1.02; }
+  .paso-g h3 mark { font-style: italic; }
+  .resumen-g li { font-family: var(--font-titulo); font-size: 92px; font-weight: 700; line-height: 1; padding: 22px 0; border: 0; }
+  .resumen-g ol { margin-bottom: 40px; }
+  .resumen-g li::before { font-size: 92px; font-weight: 700; min-width: 80px; }
+  .resumen-g .cierre { font-size: 84px; font-weight: 700; margin-top: 30px; }
 </style>
 </head>
 <body>
@@ -129,79 +148,58 @@
 </section>
 
 <!-- 2 · El sueño -->
-<section class="slide texto">
+<section class="slide grande">
   <div class="contenido">
-    <p class="etiqueta">Imaginate esto</p>
-    <h2>Es lunes y tu mes ya está <mark>listo</mark></h2>
-    <p>No tenés que pensar más qué subir.<br>Abrís Instagram y <b>ya está todo hecho</b>.</p>
+    <h2>Tu mes de contenido, <mark>listo</mark>.</h2>
+    <p class="sub">Sin pensar qué subir <span>cada día.</span></p>
   </div>
   <div class="pie"><span>@soytina.fernandez</span><span>2/8</span></div>
 </section>
 
 <!-- 3 · El dolor -->
-<section class="slide texto bordo">
+<section class="slide grande bordo">
   <div class="contenido">
-    <p class="etiqueta">Pero hoy no es así</p>
-    <h2>Pensás qué publicar <mark>todos los días</mark></h2>
-    <p>Lo hacés a último momento.<br>Y encima, <mark>nadie te compra</mark>.</p>
+    <h2>Hoy improvisás <mark>todos los días</mark>.</h2>
+    <p class="sub"><span>Y encima,</span> nadie te compra.</p>
   </div>
   <div class="pie"><span>@soytina.fernandez</span><span>3/8</span></div>
 </section>
 
 <!-- 4 · La solución -->
-<section class="slide texto rosa">
+<section class="slide grande rosa">
   <div class="contenido">
-    <p class="etiqueta">El secreto</p>
-    <h2>Hacer <mark>todo junto</mark></h2>
-    <p>En vez de un post por día, hacés <b>todo el mes en una tarde</b>.</p>
-    <p>Así ↓</p>
+    <h2>El secreto: hacer <mark>todo junto</mark>.</h2>
+    <p class="sub"><span>4 pasos.</span> Así ↓</p>
   </div>
   <div class="pie"><span>@soytina.fernandez</span><span>4/8</span></div>
 </section>
 
 <!-- 5 · Pasos 1 y 2 -->
-<section class="slide texto">
+<section class="slide grande">
   <div class="contenido">
-    <p class="etiqueta">Primero</p>
-    <h2>Las ideas y <mark>los textos</mark></h2>
-    <div class="paso">
-      <div class="n">1</div>
-      <div><h3>Anotá 30 ideas</h3><p>Cada pregunta de tus clientas es una idea.</p></div>
-    </div>
-    <div class="paso">
-      <div class="n">2</div>
-      <div><h3>Escribí los 30 textos</h3><p>Uno atrás del otro, sin publicar nada.</p></div>
-    </div>
+    <div class="paso-g"><div class="n">1</div><h3>Anotá <mark>30 ideas</mark></h3></div>
+    <div class="paso-g"><div class="n">2</div><h3>Escribí <mark>todos</mark> los textos</h3></div>
   </div>
   <div class="pie"><span>@soytina.fernandez</span><span>5/8</span></div>
 </section>
 
 <!-- 6 · Pasos 3 y 4 -->
-<section class="slide texto">
+<section class="slide grande">
   <div class="contenido">
-    <p class="etiqueta">Después</p>
-    <h2>Grabá y <mark>programá</mark></h2>
-    <div class="paso">
-      <div class="n">3</div>
-      <div><h3>Grabá todo el mismo día</h3><p>Misma ropa, mismo lugar.</p></div>
-    </div>
-    <div class="paso">
-      <div class="n">4</div>
-      <div><h3>Programalo en Instagram</h3><p>Lo cargás una vez y <mark>se sube solo</mark>.</p></div>
-    </div>
+    <div class="paso-g"><div class="n">3</div><h3>Grabá todo <mark>el mismo día</mark></h3></div>
+    <div class="paso-g"><div class="n">4</div><h3>Programalo y <mark>se sube solo</mark></h3></div>
   </div>
   <div class="pie"><span>@soytina.fernandez</span><span>6/8</span></div>
 </section>
 
 <!-- 7 · Resumen guardable -->
-<section class="slide texto rosa resumen">
+<section class="slide rosa resumen resumen-g">
   <div class="contenido">
-    <p class="etiqueta">Repasemos</p>
     <ol>
-      <li>Anotá 30 ideas</li>
-      <li>Escribí los textos</li>
-      <li>Grabá todo junto</li>
-      <li>Programalo</li>
+      <li>Anotá ideas</li>
+      <li>Escribí</li>
+      <li>Grabá</li>
+      <li>Programá</li>
     </ol>
     <p class="cierre">Una tarde = <mark>un mes listo</mark>.</p>
   </div>

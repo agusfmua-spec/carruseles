@@ -30,4 +30,9 @@
   - "A prueba de boludos": lenguaje súper simple, frases cortas, una sola idea por slide.
     Nada de jerga (pilares, batching, hooks, funnel, herramientas con nombre raro).
     Si hay pasos, un paso por slide. Ejemplos concretos de la vida real.
-- **Notas de diseño aprendidas**: (todavía ninguna)
+- **Notas de diseño aprendidas**:
+  - Le gustó la portada: título serif arriba sobre crema, foto abajo sin pisar el texto, "Deslizá" en botón bordó.
+  - Interior: demasiado editorial pierde lo llamativo. Preferir UNA frase grande por slide (serif bold ~130px,
+    palabra clave en bordó cursiva) + una línea corta en Quicksand. Sin etiquetas chicas, líneas ni textos de apoyo largos.
+    Pasos: número en círculo bordó + frase corta. Cuanto más simple y conciso, mejor.
+  - Alternar fondos crema / bordó (dolor) / rosa (solución, resumen) funciona.

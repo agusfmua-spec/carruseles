@@ -8,7 +8,7 @@
 
 | # | Rol | Layout | Título | Texto | Puente (abre la siguiente) |
 |---|-----|--------|--------|-------|----------------------------|
-| 1 | Hook aspiracional | portada con foto abajo | EL SECRETO (gigante) para crear un mes de contenido en una sola tarde | GUARDÁ ESTE POST · (para que el "no tengo tiempo" deje de ser una excusa) · Deslizá → | — |
+| 1 | Hook aspiracional | portada con foto abajo | EL SECRETO (gigante) para crear un mes de contenido en una sola tarde | (para que el "no tengo tiempo" deje de ser una excusa) — sin kicker ni "Deslizá" | — |
 | 2 | El sueño | frase grande, crema | Tu mes de contenido, listo. | Sin pensar qué subir cada día. | Pero hay un detalle… → |
 | 3 | El dolor | frase grande, bordó | Hoy improvisás todos los días. | Y encima, nadie te compra. | ¿Sabés por qué? → |
 | 4 | La solución | frase grande, rosa | El secreto: hacer todo junto. | No te falta tiempo. Hacés todo de a uno. | Son 4 pasos. El primero es el más fácil → |

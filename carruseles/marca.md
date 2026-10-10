@@ -43,6 +43,7 @@
     con letras oscuras.)
   - Portada fuerte: palabra gancho GIGANTE en mayúsculas (ej. "EL SECRETO", en bordó cursiva) + promesa en serif
     + bajada chica que rompe la excusa ("para que el 'no tengo tiempo' deje de ser una excusa").
+  - Portada SIN "Guardá este post" ni "Deslizá →": solo hook + firma.
   - Flechas de continuidad ("Así →") siempre hacia la DERECHA (se desliza al costado), nunca hacia abajo.
   - Aprobado con este estilo: carrusel 01 (mes de contenido en una tarde).
   - Alternar fondos crema / bordó (dolor) / rosa (solución, resumen) funciona.

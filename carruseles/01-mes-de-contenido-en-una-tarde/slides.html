@@ -77,6 +77,11 @@
   .portada .secreto mark { font-weight: 700; color: var(--suave); }
   .portada .promesa { font-family: var(--font-titulo); font-weight: 700; font-size: 62px; line-height: 1.08; margin-bottom: 28px; }
   .portada .promesa mark { font-style: italic; font-weight: 700; color: var(--suave); }
+  .portada .resaltado {
+    background: var(--acento); color: #fff; padding: 0 14px; border-radius: 6px; text-shadow: none;
+    -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  }
+  .portada .promesa { line-height: 1.22; }
   .portada .excusa { max-width: 480px; font-size: 36px; font-weight: 400; line-height: 1.3; }
   .portada .excusa b { font-weight: 700; color: var(--suave); }
   .portada .kicker {
@@ -155,7 +160,7 @@
   <div class="contenido">
     <p class="kicker">Guardá este post</p>
     <h1 class="secreto">El <mark>secreto</mark></h1>
-    <p class="promesa">para crear un mes de contenido en <mark>una sola tarde</mark></p>
+    <p class="promesa">para <span class="resaltado">crear un mes de contenido</span> en <mark>una sola tarde</mark></p>
     <p class="excusa">(para que el <b>"no tengo tiempo"</b> deje de ser una excusa)</p>
   </div>
   <div class="pie"><span>@soytina.fernandez</span><span class="desliza">Deslizá →</span></div>

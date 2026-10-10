@@ -27,4 +27,7 @@
     ("Así logré…", "Así hice…", "Podés…"). Nunca abrir con el problema.
   - Arco: sueño → (cómo se ve / prueba) → ir bajando hacia el dolor y meter el dedo en la llaga
     en el medio del carrusel → solución / camino → CTA.
+  - "A prueba de boludos": lenguaje súper simple, frases cortas, una sola idea por slide.
+    Nada de jerga (pilares, batching, hooks, funnel, herramientas con nombre raro).
+    Si hay pasos, un paso por slide. Ejemplos concretos de la vida real.
 - **Notas de diseño aprendidas**: (todavía ninguna)

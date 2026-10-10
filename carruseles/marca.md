@@ -16,4 +16,9 @@
   5. No puede escalar su marca
 - **Tono y registro**: argentina, de vos; cercana y directa
 - **Lead magnet**: varía por carrusel (video de YouTube, PDF, etc.) y también la palabra clave. Sugerir 2–3 opciones en cada brief; si se elige PDF, crearlo con la misma marca.
+- **Reglas de copy (de Tina)**:
+  - Hook y portada SIEMPRE aspiracionales/expansivos: venden el sueño, no el dolor
+    ("Así logré…", "Así hice…", "Podés…"). Nunca abrir con el problema.
+  - Arco: sueño → (cómo se ve / prueba) → ir bajando hacia el dolor y meter el dedo en la llaga
+    en el medio del carrusel → solución / camino → CTA.
 - **Notas de diseño aprendidas**: (todavía ninguna)

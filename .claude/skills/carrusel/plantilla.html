@@ -1,0 +1,170 @@
+<!doctype html>
+<!--
+  Plantilla de carrusel. Copiala a carruseles/NN-slug/slides.html y:
+  1. Ajustá las variables de :root con los datos de carruseles/marca.md.
+  2. Cargá las fuentes: <link> de Google Fonts o @font-face con ../fuentes/archivo.ttf
+  3. Dejá una <section class="slide ..."> por slide (layouts abajo) y borrá los ejemplos que no uses.
+  Las fotos se referencian relativas a esta carpeta: ../fotos/nombre.jpg
+-->
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Carrusel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  /* Fuente propia (opcional):
+  @font-face { font-family: "MiTitulo"; src: url("../fuentes/MiTitulo.ttf"); font-weight: 700; } */
+
+  :root {
+    --w: 1080px;            /* 1080×1350 (4:5) · 1080×1080 (1:1) · 1080×1920 (9:16) */
+    --h: 1350px;
+    --fondo: #F6F1EA;       /* fondo de slides de texto */
+    --texto: #1E1B18;       /* texto principal */
+    --acento: #C2410C;      /* resaltados, números, flecha */
+    --suave: #E8DED1;       /* cajas, separadores */
+    --font-titulo: "Playfair Display", Georgia, serif;
+    --font-texto: "Inter", system-ui, sans-serif;
+    --margen: 96px;
+    --t-portada: 112px;     /* tamaño del hook de portada */
+    --t-titulo: 76px;
+    --t-texto: 40px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #888; display: flex; flex-direction: column; gap: 40px; padding: 0; }
+
+  .slide {
+    width: var(--w); height: var(--h); position: relative; overflow: hidden;
+    background: var(--fondo); color: var(--texto);
+    font-family: var(--font-texto); font-size: var(--t-texto); line-height: 1.35;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: var(--margen);
+  }
+  .slide h1, .slide h2 { font-family: var(--font-titulo); line-height: 1.08; letter-spacing: -0.01em; }
+  .slide h1 { font-size: var(--t-portada); }
+  .slide h2 { font-size: var(--t-titulo); margin-bottom: 36px; }
+  .slide p + p { margin-top: 24px; }
+  .slide mark { background: none; color: var(--acento); }
+  .contenido { position: relative; z-index: 2; }
+
+  /* Pie: @usuario y numeración */
+  .pie {
+    position: absolute; z-index: 3; left: var(--margen); right: var(--margen); bottom: 56px;
+    display: flex; justify-content: space-between; font-size: 26px; opacity: .75;
+  }
+  .desliza { color: var(--acento); font-weight: 600; opacity: 1; }
+
+  /* Foto a sangre con degradado para que el texto se lea */
+  .foto { position: absolute; inset: 0; z-index: 0; }
+  .foto img { width: 100%; height: 100%; object-fit: cover; }
+  .foto-fondo, .portada.con-foto { color: #fff; justify-content: flex-end; padding-bottom: 180px; }
+  .foto-fondo .foto::after, .portada.con-foto .foto::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.78) 0%, rgba(0,0,0,.35) 45%, rgba(0,0,0,0) 70%);
+  }
+  .foto-fondo .pie, .portada.con-foto .pie { color: #fff; }
+
+  /* Portada */
+  .portada .kicker {
+    font-size: 30px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em;
+    color: var(--acento); margin-bottom: 28px;
+  }
+  .portada.con-foto .kicker { color: #fff; opacity: .9; }
+
+  /* Foto arriba, texto abajo */
+  .foto-mitad { padding: 0; justify-content: flex-start; }
+  .foto-mitad .media { height: 52%; overflow: hidden; }
+  .foto-mitad .media img { width: 100%; height: 100%; object-fit: cover; }
+  .foto-mitad .contenido { padding: 64px var(--margen) 140px; }
+
+  /* Lista numerada */
+  .lista ol { list-style: none; counter-reset: n; }
+  .lista li { counter-increment: n; display: flex; gap: 28px; padding: 22px 0; border-bottom: 2px solid var(--suave); }
+  .lista li:last-child { border-bottom: 0; }
+  .lista li::before {
+    content: counter(n); font-family: var(--font-titulo); font-size: 56px; line-height: 1;
+    color: var(--acento); min-width: 56px;
+  }
+
+  /* Número grande (paso, dato, cifra) */
+  .numero { font-family: var(--font-titulo); font-size: 220px; line-height: .9; color: var(--acento); margin-bottom: 24px; }
+
+  /* Cierre con CTA */
+  .cta { background: var(--texto); color: var(--fondo); text-align: center; align-items: center; }
+  .cta .palabra {
+    display: inline-block; margin: 40px 0 28px; padding: 22px 56px; border-radius: 999px;
+    background: var(--acento); color: #fff; font-family: var(--font-titulo); font-size: 88px; letter-spacing: .04em;
+  }
+  .cta .pie { color: var(--fondo); }
+</style>
+</head>
+<body>
+
+<!-- PORTADA con foto. Sin foto: quitá "con-foto" y el div .foto -->
+<section class="slide portada con-foto">
+  <div class="foto"><img src="../fotos/ejemplo-1.jpg" alt=""></div>
+  <div class="contenido">
+    <p class="kicker">Guardá este post</p>
+    <h1>5 errores que frenan tu <mark>marca personal</mark></h1>
+  </div>
+  <div class="pie"><span>@usuario</span><span class="desliza">Deslizá →</span></div>
+</section>
+
+<!-- TEXTO -->
+<section class="slide texto">
+  <div class="contenido">
+    <div class="numero">01</div>
+    <h2>Hablar para todo el mundo</h2>
+    <p>Si tu contenido le sirve a cualquiera, no le habla a <mark>nadie</mark>. Elegí a una persona y escribile a ella.</p>
+  </div>
+  <div class="pie"><span>@usuario</span><span>2/6</span></div>
+</section>
+
+<!-- FOTO MITAD -->
+<section class="slide foto-mitad">
+  <div class="media"><img src="../fotos/ejemplo-2.jpg" alt=""></div>
+  <div class="contenido">
+    <h2>Mostrar solo el resultado</h2>
+    <p>La gente se engancha con el proceso, no con la foto final.</p>
+  </div>
+  <div class="pie"><span>@usuario</span><span>3/6</span></div>
+</section>
+
+<!-- FOTO DE FONDO -->
+<section class="slide foto-fondo">
+  <div class="foto"><img src="../fotos/ejemplo-3.jpg" alt=""></div>
+  <div class="contenido">
+    <h2>No tener una oferta clara</h2>
+    <p>Si no saben qué venís a vender, no te pueden comprar.</p>
+  </div>
+  <div class="pie"><span>@usuario</span><span>4/6</span></div>
+</section>
+
+<!-- LISTA (resumen guardable) -->
+<section class="slide lista">
+  <div class="contenido">
+    <h2>En resumen</h2>
+    <ol>
+      <li>Hablale a una persona</li>
+      <li>Mostrá el proceso</li>
+      <li>Ofertá con claridad</li>
+    </ol>
+  </div>
+  <div class="pie"><span>@usuario</span><span>5/6</span></div>
+</section>
+
+<!-- CTA -->
+<section class="slide cta">
+  <div class="contenido">
+    <h2>¿Querés la guía completa?</h2>
+    <p>Comentá</p>
+    <div class="palabra">GUÍA</div>
+    <p>y te la envío gratis por DM</p>
+  </div>
+  <div class="pie"><span>@usuario</span><span>6/6</span></div>
+</section>
+
+</body>
+</html>

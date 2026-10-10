@@ -18,10 +18,19 @@
 | 8 | CTA | foto arriba + bordó | ¿Querés mi lista de 30 ideas? | Comentá LISTA y te la envío por DM. | — |
 
 ## Caption
-El secreto para crear un mes de contenido en una sola tarde.
+👇 Comentá LISTA y te envío GRATIS mis 30 ideas de contenido que venden.
 
-No te falta tiempo: te falta hacerlo todo junto. Seguí estos 4 pasos y te olvidás de pensar qué subir cada día.
+El secreto para crear un mes de contenido en una sola tarde no es tener más tiempo.
+Es dejar de hacer todo de a uno.
 
-Comentá LISTA y te envío mi lista de 30 ideas de contenido que venden 🤍
+Así de simple:
+1. Anotá 30 ideas
+2. Escribí todos los textos
+3. Grabá todo el mismo día
+4. Programalo y se sube solo
 
-#marcapersonal #emprendedorasargentinas #contenidoparainstagram #mujeresemprendedoras
+Una tarde = un mes listo. Y el "no tengo tiempo" deja de ser una excusa.
+
+Guardalo para hacerlo este fin de semana y comentá LISTA para recibir las 30 ideas 🤍
+
+#marcapersonal #emprendedorasargentinas #contenidoparainstagram #mujeresemprendedoras #estrategiadecontenido

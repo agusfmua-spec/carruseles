@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Un mes de contenido en una tarde</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --w: 1080px;
+    --h: 1350px;
+    --fondo: #F1F0EC;
+    --texto: #2B1D1F;
+    --acento: #6E1A2E;
+    --suave: #F0D7DC;
+    --font-titulo: "Noto Serif Display", Georgia, serif;
+    --font-texto: "Quicksand", system-ui, sans-serif;
+    --margen: 104px;
+    --t-portada: 104px;
+    --t-titulo: 100px;
+    --t-texto: 46px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #888; display: flex; flex-direction: column; gap: 40px; }
+
+  .slide {
+    width: var(--w); height: var(--h); position: relative; overflow: hidden;
+    background: var(--fondo); color: var(--texto);
+    font-family: var(--font-texto); font-size: var(--t-texto); line-height: 1.4; font-weight: 400;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: var(--margen);
+  }
+  .slide h1, .slide h2 { font-family: var(--font-titulo); font-weight: 400; line-height: 1.04; letter-spacing: -0.015em; }
+  .slide h1 { font-size: var(--t-portada); }
+  .slide h2 { font-size: var(--t-titulo); margin-bottom: 48px; }
+  .slide h1 b, .slide h2 b { font-weight: 700; }
+  .slide mark { background: none; color: var(--acento); font-weight: 700; }
+  .slide h1 mark, .slide h2 mark { font-style: italic; font-weight: 400; }
+  .slide p b { font-weight: 700; }
+  .contenido { position: relative; z-index: 2; }
+
+  /* Etiqueta en mayúsculas arriba del título */
+  .etiqueta {
+    font-size: 26px; font-weight: 700; text-transform: uppercase; letter-spacing: .28em;
+    color: var(--acento); margin-bottom: 40px; display: flex; align-items: center; gap: 24px;
+  }
+  .etiqueta::before { content: ""; width: 64px; height: 2px; background: currentColor; }
+
+  /* Pie: firma y numeración */
+  .pie {
+    position: absolute; z-index: 3; left: var(--margen); right: var(--margen); bottom: 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: .22em; opacity: .7;
+  }
+  .desliza { opacity: 1; }
+
+  /* Fondo bordó (dolor) */
+  .bordo { background: var(--acento); color: var(--fondo); }
+  .bordo mark, .bordo .etiqueta { color: var(--suave); }
+  /* Fondo rosa (solución) */
+  .rosa { background: var(--suave); }
+
+  /* Portada con foto */
+  .portada { justify-content: flex-start; padding-top: 120px; }
+  .foto { position: absolute; inset: 0; z-index: 0; }
+  .foto img { width: 100%; height: 100%; object-fit: cover; }
+  .portada .foto { top: 640px; }
+  .portada .foto img { object-position: 50% 40%; }
+  .portada .foto::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(241,240,236,1) 0%, rgba(241,240,236,0) 22%);
+  }
+  .portada .kicker {
+    font-size: 26px; font-weight: 700; text-transform: uppercase; letter-spacing: .28em;
+    color: var(--acento); margin-bottom: 36px;
+  }
+  .portada .pie { color: #fff; opacity: 1; text-shadow: 0 1px 12px rgba(0,0,0,.45); }
+  .portada .desliza {
+    background: var(--acento); color: #fff; text-shadow: none;
+    padding: 18px 34px; border-radius: 999px; letter-spacing: .2em;
+  }
+
+  /* Pasos */
+  .paso { display: flex; gap: 40px; padding: 44px 0; border-top: 2px solid rgba(110,26,46,.18); }
+  .paso:last-child { border-bottom: 2px solid rgba(110,26,46,.18); }
+  .paso .n { font-family: var(--font-titulo); font-style: italic; font-size: 120px; line-height: .85; color: var(--acento); min-width: 90px; }
+  .paso h3 { font-family: var(--font-titulo); font-weight: 700; font-size: 52px; line-height: 1.1; margin-bottom: 14px; }
+  .paso p { font-size: 40px; }
+
+  /* Resumen */
+  .resumen ol { list-style: none; counter-reset: n; margin-bottom: 56px; }
+  .resumen li {
+    counter-increment: n; display: flex; align-items: baseline; gap: 32px;
+    padding: 26px 0; border-bottom: 2px solid rgba(110,26,46,.18); font-weight: 700; font-size: 46px;
+  }
+  .resumen li::before {
+    content: counter(n); font-family: var(--font-titulo); font-style: italic; font-weight: 400;
+    font-size: 64px; color: var(--acento); min-width: 50px;
+  }
+  .resumen .cierre { font-family: var(--font-titulo); font-size: 64px; line-height: 1.1; }
+
+  /* CTA: foto arriba, panel bordó abajo */
+  .cta { padding: 0; justify-content: flex-start; background: var(--acento); color: var(--fondo); }
+  .cta .media { height: 44%; overflow: hidden; }
+  .cta .media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+  .cta .contenido { padding: 72px var(--margen) 0; text-align: center; }
+  .cta h2 { font-size: 80px; margin-bottom: 36px; }
+  .cta h2 mark { color: var(--suave); }
+  .cta .palabra {
+    display: inline-block; margin: 24px 0; padding: 18px 64px; border-radius: 999px;
+    background: var(--fondo); color: var(--acento);
+    font-family: var(--font-titulo); font-weight: 700; font-size: 84px; letter-spacing: .08em;
+  }
+  .cta .pie { color: var(--fondo); }
+</style>
+</head>
+<body>
+
+<!-- 1 · Hook aspiracional -->
+<section class="slide portada">
+  <div class="foto"><img src="../fotos/grabando-celular-sillon.jpg" alt=""></div>
+  <div class="contenido">
+    <p class="kicker">Guardá este post</p>
+    <h1>Podés crear <b>un mes de contenido</b> en <mark>una sola tarde</mark></h1>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span class="desliza">Deslizá →</span></div>
+</section>
+
+<!-- 2 · El sueño -->
+<section class="slide texto">
+  <div class="contenido">
+    <p class="etiqueta">Imaginate esto</p>
+    <h2>Es lunes y tu mes ya está <mark>listo</mark></h2>
+    <p>No tenés que pensar más qué subir.<br>Abrís Instagram y <b>ya está todo hecho</b>.</p>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>2/8</span></div>
+</section>
+
+<!-- 3 · El dolor -->
+<section class="slide texto bordo">
+  <div class="contenido">
+    <p class="etiqueta">Pero hoy no es así</p>
+    <h2>Pensás qué publicar <mark>todos los días</mark></h2>
+    <p>Lo hacés a último momento.<br>Y encima, <mark>nadie te compra</mark>.</p>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>3/8</span></div>
+</section>
+
+<!-- 4 · La solución -->
+<section class="slide texto rosa">
+  <div class="contenido">
+    <p class="etiqueta">El secreto</p>
+    <h2>Hacer <mark>todo junto</mark></h2>
+    <p>En vez de un post por día, hacés <b>todo el mes en una tarde</b>.</p>
+    <p>Así ↓</p>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>4/8</span></div>
+</section>
+
+<!-- 5 · Pasos 1 y 2 -->
+<section class="slide texto">
+  <div class="contenido">
+    <p class="etiqueta">Primero</p>
+    <h2>Las ideas y <mark>los textos</mark></h2>
+    <div class="paso">
+      <div class="n">1</div>
+      <div><h3>Anotá 30 ideas</h3><p>Cada pregunta de tus clientas es una idea.</p></div>
+    </div>
+    <div class="paso">
+      <div class="n">2</div>
+      <div><h3>Escribí los 30 textos</h3><p>Uno atrás del otro, sin publicar nada.</p></div>
+    </div>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>5/8</span></div>
+</section>
+
+<!-- 6 · Pasos 3 y 4 -->
+<section class="slide texto">
+  <div class="contenido">
+    <p class="etiqueta">Después</p>
+    <h2>Grabá y <mark>programá</mark></h2>
+    <div class="paso">
+      <div class="n">3</div>
+      <div><h3>Grabá todo el mismo día</h3><p>Misma ropa, mismo lugar.</p></div>
+    </div>
+    <div class="paso">
+      <div class="n">4</div>
+      <div><h3>Programalo en Instagram</h3><p>Lo cargás una vez y <mark>se sube solo</mark>.</p></div>
+    </div>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>6/8</span></div>
+</section>
+
+<!-- 7 · Resumen guardable -->
+<section class="slide texto rosa resumen">
+  <div class="contenido">
+    <p class="etiqueta">Repasemos</p>
+    <ol>
+      <li>Anotá 30 ideas</li>
+      <li>Escribí los textos</li>
+      <li>Grabá todo junto</li>
+      <li>Programalo</li>
+    </ol>
+    <p class="cierre">Una tarde = <mark>un mes listo</mark>.</p>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>7/8</span></div>
+</section>
+
+<!-- 8 · CTA -->
+<section class="slide cta">
+  <div class="media"><img src="../fotos/grabando-celular-sillon.jpg" alt=""></div>
+  <div class="contenido">
+    <h2>¿Querés mi lista de <mark>30 ideas</mark>?</h2>
+    <p>Comentá</p>
+    <div class="palabra">LISTA</div>
+    <p>y te la envío por DM</p>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>8/8</span></div>
+</section>
+
+</body>
+</html>

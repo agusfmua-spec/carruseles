@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>30 ideas de contenido que venden — @soytina.fernandez</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: 210mm 297mm; margin: 0; }
+  :root {
+    --fondo: #F1F0EC; --texto: #2B1D1F; --acento: #6E1A2E; --suave: #F0D7DC;
+    --serif: "Noto Serif Display", Georgia, serif; --sans: "Quicksand", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--sans); color: var(--texto); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .pagina {
+    width: 210mm; height: 297mm; position: relative; overflow: hidden;
+    background: var(--fondo); padding: 22mm 20mm 26mm; page-break-after: always;
+    font-size: 11.5pt; line-height: 1.5;
+  }
+  .pagina:last-child { page-break-after: auto; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.05; letter-spacing: -0.01em; }
+  mark { background: none; color: var(--acento); font-style: italic; }
+  b { font-weight: 700; }
+  .etiqueta {
+    font-size: 8.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: .28em; color: var(--acento);
+    display: flex; align-items: center; gap: 4mm; margin-bottom: 6mm;
+  }
+  .etiqueta::before { content: ""; width: 12mm; height: 1px; background: currentColor; }
+  .pie {
+    position: absolute; left: 20mm; right: 20mm; bottom: 12mm; display: flex; justify-content: space-between;
+    font-size: 7.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: .22em; opacity: .65;
+  }
+
+  /* Portada */
+  .portada { padding: 0; display: flex; flex-direction: column; }
+  .portada .arriba { padding: 24mm 20mm 12mm; }
+  .portada h1 { font-size: 50pt; margin-bottom: 7mm; }
+  .portada h1 b { font-weight: 700; }
+  .portada .bajada { font-size: 13pt; max-width: 140mm; }
+  .portada .foto { flex: 1; position: relative; }
+  .portada .foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; display: block; }
+  .portada .foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, var(--fondo) 0%, rgba(241,240,236,0) 18%); }
+  .portada .pie { color: #fff; opacity: 1; z-index: 2; text-shadow: 0 1px 6px rgba(0,0,0,.4); }
+
+  /* Cómo usarla */
+  .intro h2 { font-size: 34pt; margin-bottom: 8mm; }
+  .intro p { margin-bottom: 4mm; max-width: 150mm; font-size: 13pt; }
+  .pasos div { font-size: 13pt; padding: 6mm 0 !important; }
+  .pasos { margin: 8mm 0 10mm; }
+  .pasos div { display: flex; gap: 6mm; align-items: baseline; padding: 4mm 0; border-top: 1px solid rgba(110,26,46,.2); }
+  .pasos div:last-child { border-bottom: 1px solid rgba(110,26,46,.2); }
+  .pasos .n { font-family: var(--serif); font-style: italic; font-size: 24pt; color: var(--acento); min-width: 10mm; line-height: 1; }
+  .caja { background: var(--suave); padding: 8mm 9mm; border-radius: 3mm; }
+  .caja h3 { font-size: 17pt; margin-bottom: 4mm; }
+  .semana { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin-top: 4mm; }
+  .semana div { background: var(--fondo); border-radius: 2mm; padding: 4mm 3mm; text-align: center; font-size: 9.5pt; }
+  .semana b { display: block; font-family: var(--serif); font-size: 20pt; color: var(--acento); font-weight: 400; }
+
+  /* Categorías */
+  .cat-cab { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 9mm; }
+  .cat-cab h2 { font-size: 32pt; }
+  .cat-cab .para { font-size: 10pt; max-width: 62mm; text-align: right; opacity: .8; }
+  .idea { display: flex; gap: 5mm; padding: 6.2mm 0; border-top: 1px solid rgba(110,26,46,.2); }
+  .idea:last-child { border-bottom: 1px solid rgba(110,26,46,.2); }
+  .idea .n { font-family: var(--serif); font-style: italic; font-size: 24pt; color: var(--acento); min-width: 13mm; line-height: 1.05; }
+  .idea h3 { font-family: var(--sans); font-weight: 700; font-size: 13.5pt; line-height: 1.35; margin-bottom: 1.5mm; }
+  .idea p { font-size: 11.5pt; line-height: 1.4; }
+  .idea p::before { content: "Ej.: "; font-weight: 700; color: var(--acento); }
+  .check { width: 4.5mm; height: 4.5mm; border: 1.2px solid var(--acento); border-radius: 1mm; margin-left: auto; flex-shrink: 0; margin-top: 1mm; }
+
+  /* Cierre */
+  .cierre { background: var(--acento); color: var(--fondo); display: flex; flex-direction: column; justify-content: center; }
+  .cierre .etiqueta { color: var(--suave); }
+  .cierre h2 { font-size: 40pt; margin-bottom: 8mm; }
+  .cierre mark { color: var(--suave); }
+  .cierre p { font-size: 13pt; max-width: 145mm; margin-bottom: 4mm; }
+  .cierre .boton {
+    display: inline-block; margin-top: 8mm; padding: 4mm 9mm; border-radius: 99px;
+    background: var(--fondo); color: var(--acento); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; font-size: 10pt;
+  }
+</style>
+</head>
+<body>
+
+<section class="pagina portada">
+  <div class="arriba">
+    <p class="etiqueta">Guía gratuita</p>
+    <h1>30 ideas de contenido <mark>que venden</mark></h1>
+    <p class="bajada">Tu mes de contenido resuelto en una tarde. Elegí, escribí, grabá y programá.</p>
+  </div>
+  <div class="foto"><img src="../../fotos/grabando-celular-sillon.jpg" alt=""></div>
+  <div class="pie"><span>@soytina.fernandez</span></div>
+</section>
+
+<section class="pagina intro">
+  <p class="etiqueta">Antes de empezar</p>
+  <h2>Cómo usar <mark>esta lista</mark></h2>
+  <p>Acá tenés 30 ideas, una para cada día del mes. No tenés que inventar nada: <b>elegí la idea, completala con tu experiencia y listo.</b></p>
+  <div class="pasos">
+    <div><span class="n">1</span><span><b>Leé las 30 ideas</b> y marcá las que más te gusten.</span></div>
+    <div><span class="n">2</span><span><b>Escribí los textos</b> uno atrás del otro, sin publicar nada.</span></div>
+    <div><span class="n">3</span><span><b>Grabá todo el mismo día</b>: misma ropa, mismo lugar.</span></div>
+    <div><span class="n">4</span><span><b>Programalo en Instagram</b> y se sube solo.</span></div>
+  </div>
+  <div class="caja">
+    <h3>Cada semana, mezclá un poco de todo</h3>
+    <p>Si solo vendés, te dejan de mirar. Si nunca vendés, no te compran. Usá esta receta:</p>
+    <div class="semana">
+      <div><b>2</b>para que te conozcan</div>
+      <div><b>2</b>para mostrar que sabés</div>
+      <div><b>2</b>para que confíen en vos</div>
+      <div><b>1</b>para vender</div>
+    </div>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>2</span></div>
+</section>
+
+<section class="pagina">
+  <p class="etiqueta">Ideas 1 a 8</p>
+  <div class="cat-cab"><h2>Para que <mark>te conozcan</mark></h2><p class="para">La gente le compra a personas, no a marcas. Mostrate.</p></div>
+  <div class="idea"><span class="n">1</span><div><h3>Por qué empezaste con lo que hacés</h3><p>"Hace 5 años renuncié a mi trabajo para…"</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">2</span><div><h3>Un día de trabajo con vos, de principio a fin</h3><p>"Así es un martes en mi vida de emprendedora."</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">3</span><div><h3>3 cosas que no saben de vos</h3><p>"No sabías que antes de esto yo era…"</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">4</span><div><h3>El peor error que cometiste y qué aprendiste</h3><p>"El error que me costó mi primera clienta."</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">5</span><div><h3>Dónde y cómo trabajás</h3><p>Mostrá tu escritorio, tu café, tu rutina.</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">6</span><div><h3>Algo de tu rubro con lo que no estás de acuerdo</h3><p>"Todos dicen que hay que publicar todos los días. Yo no."</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">7</span><div><h3>El momento que te cambió todo</h3><p>"El día que entendí que podía vivir de esto."</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">8</span><div><h3>3 cosas que nunca vas a hacer con una clienta</h3><p>"Nunca te voy a prometer resultados mágicos."</p></div><span class="check"></span></div>
+  <div class="pie"><span>@soytina.fernandez</span><span>3</span></div>
+</section>
+
+<section class="pagina">
+  <p class="etiqueta">Ideas 9 a 16</p>
+  <div class="cat-cab"><h2>Para mostrar <mark>que sabés</mark></h2><p class="para">Enseñá algo útil. Así te ven como la experta.</p></div>
+  <div class="idea"><span class="n">9</span><div><h3>La pregunta que más te hacen, respondida</h3><p>"Me preguntan todo el tiempo cómo… Acá va."</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">10</span><div><h3>3 errores que ves seguido en tus clientas</h3><p>"Si hacés esto, estás perdiendo plata."</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">11</span><div><h3>Un mito de tu rubro y la verdad</h3><p>"Mito: necesitás miles de seguidores para vender."</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">12</span><div><h3>Un paso a paso de algo simple</h3><p>"Cómo hacer [algo de tu rubro] en 3 pasos."</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">13</span><div><h3>Las herramientas que usás todos los días</h3><p>"Las 3 apps sin las que no puedo trabajar."</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">14</span><div><h3>Qué hacer si recién empiezan</h3><p>"Si hoy arrancara de cero, haría esto."</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">15</span><div><h3>Un antes y después de tu trabajo</h3><p>Mostrá el cambio (con permiso de tu clienta).</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">16</span><div><h3>Tu opinión sobre una moda de tu rubro</h3><p>"Todo el mundo habla de esto. Te digo lo que pienso."</p></div><span class="check"></span></div>
+  <div class="pie"><span>@soytina.fernandez</span><span>4</span></div>
+</section>
+
+<section class="pagina">
+  <p class="etiqueta">Ideas 17 a 23</p>
+  <div class="cat-cab"><h2>Para que <mark>confíen</mark> en vos</h2><p class="para">Mostrá que lo que hacés funciona.</p></div>
+  <div class="idea"><span class="n">17</span><div><h3>Un testimonio de una clienta</h3><p>Captura de su mensaje o un video corto de ella.</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">18</span><div><h3>La historia de una clienta</h3><p>"Llegó así. Hicimos esto. Hoy está así."</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">19</span><div><h3>La duda que tenía una clienta antes de comprarte</h3><p>"Pensaba que no era para ella. Hasta que…"</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">20</span><div><h3>Qué pasa cuando trabajás conmigo</h3><p>"Así es una sesión conmigo, paso a paso."</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">21</span><div><h3>Detrás de escena preparando tu servicio</h3><p>Mostrá cómo armás lo que entregás.</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">22</span><div><h3>Un mensaje lindo que te mandaron</h3><p>"Este mensaje me alegró la semana." (con permiso)</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">23</span><div><h3>Tus propios resultados</h3><p>"Lo que logré aplicando lo mismo que te enseño."</p></div><span class="check"></span></div>
+  <div class="pie"><span>@soytina.fernandez</span><span>5</span></div>
+</section>
+
+<section class="pagina">
+  <p class="etiqueta">Ideas 24 a 30</p>
+  <div class="cat-cab"><h2>Para <mark>vender</mark></h2><p class="para">Si no contás que vendés, nadie te va a comprar.</p></div>
+  <div class="idea"><span class="n">24</span><div><h3>Presentá tu servicio</h3><p>"Qué es, para quién es y qué vas a lograr."</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">25</span><div><h3>Para quién NO es tu servicio</h3><p>"Si buscás resultados en una semana, esto no es para vos."</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">26</span><div><h3>Respondé "es caro" o "no tengo tiempo"</h3><p>"¿Te parece caro? Pensá cuánto te cuesta seguir igual."</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">27</span><div><h3>Cómo cambia la vida de tu clienta</h3><p>"Imaginate dentro de 3 meses…"</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">28</span><div><h3>Las preguntas frecuentes de tu servicio</h3><p>Precio, duración, cómo se paga, qué incluye.</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">29</span><div><h3>Abrí lugares</h3><p>"Abro 5 lugares hasta el viernes."</p></div><span class="check"></span></div>
+  <div class="idea"><span class="n">30</span><div><h3>La invitación directa</h3><p>"Si querés [resultado], escribime [PALABRA] por DM."</p></div><span class="check"></span></div>
+  <div class="pie"><span>@soytina.fernandez</span><span>6</span></div>
+</section>
+
+<section class="pagina cierre">
+  <p class="etiqueta">Ahora te toca a vos</p>
+  <h2>Una tarde, <mark>un mes listo</mark>.</h2>
+  <p>Elegí tus 30 ideas, reservá una tarde en tu agenda y hacelo esta semana.</p>
+  <p>Y si querés que te acompañe a escalar tu marca personal a más de 5K al mes, escribime por DM.</p>
+  <div><span class="boton">@soytina.fernandez</span></div>
+  <div class="pie"><span>@soytina.fernandez</span><span>7</span></div>
+</section>
+
+</body>
+</html>

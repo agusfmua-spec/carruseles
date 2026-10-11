@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Mi historia — Renacidas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --w: 1080px;
+    --h: 1350px;
+    --oscuro: #2B1D1F;
+    --acento: #6E1A2E;
+    --font-titulo: "Noto Serif Display", Georgia, serif;
+    --font-texto: "Quicksand", system-ui, sans-serif;
+    --margen: 104px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #888; display: flex; flex-direction: column; gap: 40px; }
+
+  /* Fondo oscuro liso: en Canva va la foto de fondo con este color como velo encima */
+  .slide {
+    width: var(--w); height: var(--h); position: relative; overflow: hidden;
+    background: radial-gradient(120% 90% at 70% 30%, #3a2629 0%, var(--oscuro) 60%);
+    color: #fff; font-family: var(--font-texto); font-size: 46px; line-height: 1.4;
+    display: flex; flex-direction: column; justify-content: center; padding: var(--margen);
+  }
+  .contenido { position: relative; z-index: 2; }
+  .slide p + p, .slide h2 + p, .slide p + h2 { margin-top: 40px; }
+  .slide b { font-weight: 700; }
+  .slide h2 { font-family: var(--font-titulo); font-weight: 700; font-size: 78px; line-height: 1.3; letter-spacing: -0.01em; }
+  .slide h1 { font-family: var(--font-titulo); font-weight: 700; font-size: 108px; line-height: 1.22; letter-spacing: -0.015em; }
+  .slide h1 + p, .slide p + h1 { margin-top: 48px; }
+
+  /* Marcador bordó (como la portada aprobada del carrusel 01) */
+  .m {
+    background: var(--acento); color: #fff; padding: 0 14px; border-radius: 6px;
+    -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  }
+  .slide h1 .m, .slide h2 .m { font-style: italic; }
+
+  .puente { font-family: var(--font-titulo); font-style: italic; font-size: 54px; margin-top: 64px !important; }
+
+  .pie {
+    position: absolute; z-index: 3; left: var(--margen); right: var(--margen); bottom: 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: .22em; opacity: .8;
+  }
+  .cta .palabra {
+    display: inline-block; margin-top: 16px; padding: 14px 52px; border-radius: 999px;
+    background: #fff; color: var(--acento);
+    font-family: var(--font-titulo); font-weight: 700; font-size: 80px; letter-spacing: .06em;
+  }
+</style>
+</head>
+<body>
+
+<!-- 1 · Hook -->
+<section class="slide">
+  <div class="contenido">
+    <p><b>Fui la mejor vendedora de autos</b>, tuve un candy bar exitoso, formé a +100 manicuras y di workshops de fotografía en 4 países.</p>
+    <h1>Y un día <span class="m">no me podía levantar de la cama.</span></h1>
+    <p class="puente">Te cuento mi historia →</p>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>1/12</span></div>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <div class="contenido">
+    <p>Me fui de mi casa a los 18 para estudiar.</p>
+    <h2>(O en realidad, para <span class="m">escapar</span> de una infancia de golpes y violencia psicológica).</h2>
+    <p>Mis abuelos me ayudaron al inicio, pero pronto no pudieron mantenerme. <b>Tuve que empezar a trabajar.</b></p>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>2/12</span></div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="contenido">
+    <p>Terminé vendiendo autos en un concesionario.</p>
+    <h2><span class="m">Ahí aprendí a vender.</span></h2>
+    <p>Viajaba todo el tiempo y <b>fui la mejor vendedora durante tres años.</b></p>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>3/12</span></div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="contenido">
+    <p>Cuando nació mi hija, ir a trabajar empezó a pesarme.</p>
+    <p>Ella pasaba el día con una niñera.</p>
+    <h2>Ahí decidí <span class="m">emprender</span> por primera vez.</h2>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>4/12</span></div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="contenido">
+    <p>Empecé con tortas y fui una de las <b>pioneras del candy bar</b> en mi ciudad.</p>
+    <h2>Tenía trabajo, pero <span class="m">no desconectaba nunca.</span></h2>
+    <p>Le puse tanta energía masculina que me desgasté.</p>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>5/12</span></div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <div class="contenido">
+    <p>Después vinieron las uñas y el maquillaje: me apasionaban.</p>
+    <p>Me formé con grandes mentoras, destaqué y me empezaron a pedir que enseñara.</p>
+    <h2>Formé a <span class="m">más de 100 manicuras</span> y muchas maquilladoras.</h2>
+    <p class="puente">Pero lo que vino después… →</p>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>6/12</span></div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="contenido">
+    <p>Llegó la pandemia y un curso de fotografía (para sacarle "fotos lindas" a mis maquillajes)…</p>
+    <h2><span class="m">terminó cambiando mi vida.</span></h2>
+    <p>Adopté un estilo, lo compartí en redes… y <b>fotógrafos de todo el mundo me empezaron a pedir que les enseñara</b> →</p>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>7/12</span></div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <div class="contenido">
+    <p>Hice mi primer workshop online y después uno presencial con <b>+40 alumnas de todo el país.</b></p>
+    <p>Después: <b>Colombia, España, Francia</b> y una ponencia en el congreso de fotografía más importante de Argentina.</p>
+    <h2>La Agustina que se hacía chiquita para no hacer ruido <span class="m">se encontró con un mundo gigante.</span></h2>
+    <p class="puente">Pero… →</p>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>8/12</span></div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <div class="contenido">
+    <p>Desde afuera parecía que lo tenía todo.</p>
+    <p>Pero volví de mi último workshop y <b>la falta de mentalidad para sostener el crecimiento me pasó factura.</b></p>
+    <h2>Ansiedad. Depresión. <span class="m">Meses sin poder levantarme de la cama.</span></h2>
+    <p class="puente">Hasta que… →</p>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>9/12</span></div>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <div class="contenido">
+    <p>Ahí empecé a trabajar mi mentalidad y mi parte emocional.</p>
+    <h2>Entendí que <span class="m">escalar sin cuidarte no es éxito.</span></h2>
+    <p>Y que se puede construir una marca <b>sin quemarte en el intento.</b></p>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>10/12</span></div>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <div class="contenido">
+    <p>Hoy mi misión es</p>
+    <h2><span class="m">acompañar a otras mujeres a escalar sus marcas</span></h2>
+    <p>y vivir la vida de sus sueños, acortándoles el camino con todo lo que viví en mis <b>múltiples renacimientos.</b></p>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>11/12</span></div>
+</section>
+
+<!-- 12 · CTA -->
+<section class="slide cta">
+  <div class="contenido">
+    <h2>Si vos también querés escalar y <span class="m">convertirte en referente en lo tuyo</span>, te puedo acompañar.</h2>
+    <p>No solo desde lo que estudié: desde alguien que <b>ya lo vivió más de una vez.</b></p>
+    <p>Comentá</p>
+    <div class="palabra">RENACIDAS</div>
+    <p style="margin-top:16px">y te cuento cómo.</p>
+  </div>
+  <div class="pie"><span>@soytina.fernandez</span><span>12/12</span></div>
+</section>
+
+</body>
+</html>

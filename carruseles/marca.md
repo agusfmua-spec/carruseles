@@ -46,4 +46,6 @@
   - Portada SIN "Guardá este post" ni "Deslizá →": solo hook + firma.
   - Flechas de continuidad ("Así →") siempre hacia la DERECHA (se desliza al costado), nunca hacia abajo.
   - Aprobado con este estilo: carrusel 01 (mes de contenido en una tarde).
+  - Carruseles para editar en Canva con fotos de fondo de baja exposición: fondo oscuro #2B1D1F, texto blanco,
+    frase clave en serif bold con marcador bordó. Ella agrega las fotos.
   - Alternar fondos crema / bordó (dolor) / rosa (solución, resumen) funciona.

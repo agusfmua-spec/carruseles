@@ -4,6 +4,7 @@
 - **Tema**: historia personal de Tina (vendedora → candy bar → uñas/maquillaje → fotografía internacional → depresión → mentalidad → misión)
 - **Objetivo**: conexión + leads · **Tipo**: storytelling personal · **Slides**: 12
 - **CTA**: Comentá **RENACIDAS** y te cuento cómo (conversación por DM sobre acompañamiento)
+- **Canva (editable)**: https://www.canva.com/d/xPAshc2iY_sD8cl — importado desde `canva.pptx` (generado con `.claude/skills/carrusel/canva_pptx.py canva.json`)
 - **Fotos**: las agrega Tina en Canva (baja exposición). Diseño: fondo oscuro #2B1D1F, texto blanco, marcador bordó #6E1A2E.
 
 | # | Rol | Texto |
